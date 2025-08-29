@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.calculadora.databinding.ActivityMainBinding
+import org.mariuszgromada.math.mxparser.Expression
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -81,7 +82,19 @@ class MainActivity : AppCompatActivity() {
             calculo.text = calculo.text.dropLast(1)
         }
 
+        binding.CE.setOnClickListener {
+            calculo.text = ""
+        }
 
+        binding.igual.setOnClickListener {
+            val resultadoCalculo = Expression(calculo.text.toString()).calculate()
 
+            if (resultadoCalculo.isNaN()){
+                binding.conta.text= "Entrada inválida!"
+            }else{
+                binding.conta.text = resultadoCalculo.toString()
+            }
+
+        }
     }
 }

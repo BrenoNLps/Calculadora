@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/org.mariuszgromada.math/MathParser.org-mXparser
+    implementation("org.mariuszgromada.math:MathParser.org-mXparser:6.1.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
