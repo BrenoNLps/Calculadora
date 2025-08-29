@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp">
         <TextView
-            android:id="@+id/numero"
+            android:id="@+id/conta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="30sp"
-            app:layout_constraintBottom_toTopOf="@+id/numero"
+            app:layout_constraintBottom_toTopOf="@+id/conta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -92,7 +92,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sete"
                 android:text="7"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/oito"
                 android:text="8"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -112,7 +112,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nove"
                 android:text="9"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -137,7 +137,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/quatro"
                 android:text="4"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -147,7 +147,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cinco"
                 android:text="5"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -157,7 +157,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/seis"
                 android:text="6"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -182,7 +182,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/um"
                 android:text="1"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -192,7 +192,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/dois"
                 android:text="2"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -202,7 +202,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/tres"
                 android:text="3"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -227,7 +227,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ponto"
                 android:text="."
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -237,17 +237,17 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zero"
                 android:text="0"
-                android:background="@color/purple"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="2dp"
                 android:layout_height="match_parent"
                 />
-            <androidx.appcompat.widget.AppCompatButton
+            <ImageButton
                 android:id="@+id/backspace"
-                android:text="<="
-                android:background="@color/purple"
+                android:src="@drawable/backspace_24"
+                android:background="@color/purple2"
                 android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_weight="1"
