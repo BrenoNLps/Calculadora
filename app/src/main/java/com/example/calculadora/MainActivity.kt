@@ -24,73 +24,43 @@ class MainActivity : AppCompatActivity() {
         val calculo = binding.conta
 
 
+        fun adicionarTexto(valor : String){ calculo.text = "${calculo.text}$valor" }
+
         //NÚMEROS
-        binding.um.setOnClickListener {
-            calculo.text = "${calculo.text}1"
-        }
-        binding.dois.setOnClickListener {
-            calculo.text = "${calculo.text}2"
-        }
-        binding.tres.setOnClickListener {
-            calculo.text = "${calculo.text}3"
-        }
-        binding.quatro.setOnClickListener {
-            calculo.text = "${calculo.text}4"
-        }
-        binding.cinco.setOnClickListener {
-            calculo.text = "${calculo.text}5"
-        }
-        binding.seis.setOnClickListener {
-            calculo.text = "${calculo.text}6"
-        }
-        binding.sete.setOnClickListener {
-            calculo.text = "${calculo.text}7"
-        }
-        binding.oito.setOnClickListener {
-            calculo.text = "${calculo.text}8"
-        }
-        binding.nove.setOnClickListener {
-            calculo.text = "${calculo.text}9"
-        }
-        binding.zero.setOnClickListener {
-            calculo.text = "${calculo.text}0"
-        }
+        binding.um.setOnClickListener    {adicionarTexto("1")}
+        binding.dois.setOnClickListener  {adicionarTexto("2")}
+        binding.tres.setOnClickListener  {adicionarTexto("3")}
+        binding.quatro.setOnClickListener{adicionarTexto("4")}
+        binding.cinco.setOnClickListener {adicionarTexto("5")}
+        binding.seis.setOnClickListener  {adicionarTexto("6")}
+        binding.sete.setOnClickListener  {adicionarTexto("7")}
+        binding.oito.setOnClickListener  {adicionarTexto("8")}
+        binding.nove.setOnClickListener  {adicionarTexto("9")}
+        binding.zero.setOnClickListener  {adicionarTexto("0")}
         //OPERAÇÕES
-        binding.fechaParenteses.setOnClickListener {
-            calculo.text = "${calculo.text})"
-        }
-        binding.abertParenteses.setOnClickListener {
-            calculo.text = "${calculo.text}("
-        }
-        binding.ponto.setOnClickListener {
-            calculo.text = "${calculo.text}."
-        }
-        binding.multiplica.setOnClickListener {
-            calculo.text = "${calculo.text}*"
-        }
-        binding.divide.setOnClickListener {
-            calculo.text = "${calculo.text}/"
-        }
-        binding.menos.setOnClickListener {
-            calculo.text = "${calculo.text}-"
-        }
-        binding.mais.setOnClickListener {
-            calculo.text = "${calculo.text}+"
-        }
+        binding.fechaParenteses.setOnClickListener {adicionarTexto(")")}
+        binding.abertParenteses.setOnClickListener {adicionarTexto("(")}
+        binding.multiplica.setOnClickListener {adicionarTexto("*")}
+        binding.divide.setOnClickListener {adicionarTexto("/")}
+        binding.ponto.setOnClickListener {adicionarTexto(".")}
+        binding.menos.setOnClickListener {adicionarTexto("-")}
+        binding.mais.setOnClickListener {adicionarTexto("+")}
+        binding.backspace.setOnClickListener { calculo.text = calculo.text.dropLast(1) }
+        binding.CE.setOnClickListener { calculo.text = "" }
 
-        binding.backspace.setOnClickListener {
-            calculo.text = calculo.text.dropLast(1)
-        }
 
-        binding.CE.setOnClickListener {
-            calculo.text = ""
-        }
 
         binding.igual.setOnClickListener {
+            if(binding.mensagem.text!=""){binding.mensagem.text= ""}
+
+            binding.mensagem.text= ""
             val resultadoCalculo = Expression(calculo.text.toString()).calculate()
 
-            if (resultadoCalculo.isNaN()){
-                binding.conta.text= "Entrada inválida!"
+            if (calculo.text.endsWith("/0")){
+                binding.mensagem.text= "Erro: Divisão por zero!"
+            }
+            else if (resultadoCalculo.isNaN()){
+                binding.mensagem.text= "Entrada inválida!"
             }else{
                 binding.conta.text = resultadoCalculo.toString()
             }
