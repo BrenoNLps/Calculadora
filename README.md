@@ -1,3 +1,5 @@
+![Calculadora Android](images/capa.png)
+
 # 📱 Calculadora Android
 Calculadora simples usando Kotlin e Android Studio 
 
