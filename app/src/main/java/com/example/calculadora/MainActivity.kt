@@ -20,30 +20,68 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-            val calculo = findViewById<TextView>(R.id.conta)
-
-            val botaoUm = findViewById<Button>(R.id.um)
-            val botaoDois = findViewById<Button>(R.id.dois)
-            val botaotres = findViewById<Button>(R.id.tres)
-            val botaoQuatro = findViewById<Button>(R.id.quatro)
-            val botaoCinco = findViewById<Button>(R.id.cinco)
-            val botaoSeis = findViewById<Button>(R.id.seis)
-            val botaoSete = findViewById<Button>(R.id.sete)
-            val botaoOito = findViewById<Button>(R.id.oito)
-            val botaoNove = findViewById<Button>(R.id.nove)
-            val botaoZero = findViewById<Button>(R.id.zero)
-
-            val botaoCE = findViewById<Button>(R.id.CE)
-            val botaoFechaP = findViewById<Button>(R.id.fecha_parenteses)
-            val botaoAbreP = findViewById<Button>(R.id.abert_parenteses)
-            val botaoMenos = findViewById<Button>(R.id.menos)
-            val botaoMais = findViewById<Button>(R.id.mais)
-            val botaoVezes = findViewById<Button>(R.id.multiplica)
-            val botaoDividir = findViewById<Button>(R.id.divide)
+        val calculo = binding.conta
 
 
-
+        //NÚMEROS
+        binding.um.setOnClickListener {
+            calculo.text = "${calculo.text}1"
         }
+        binding.dois.setOnClickListener {
+            calculo.text = "${calculo.text}2"
+        }
+        binding.tres.setOnClickListener {
+            calculo.text = "${calculo.text}3"
+        }
+        binding.quatro.setOnClickListener {
+            calculo.text = "${calculo.text}4"
+        }
+        binding.cinco.setOnClickListener {
+            calculo.text = "${calculo.text}5"
+        }
+        binding.seis.setOnClickListener {
+            calculo.text = "${calculo.text}6"
+        }
+        binding.sete.setOnClickListener {
+            calculo.text = "${calculo.text}7"
+        }
+        binding.oito.setOnClickListener {
+            calculo.text = "${calculo.text}8"
+        }
+        binding.nove.setOnClickListener {
+            calculo.text = "${calculo.text}9"
+        }
+        binding.zero.setOnClickListener {
+            calculo.text = "${calculo.text}0"
+        }
+        //OPERAÇÕES
+        binding.fechaParenteses.setOnClickListener {
+            calculo.text = "${calculo.text})"
+        }
+        binding.abertParenteses.setOnClickListener {
+            calculo.text = "${calculo.text}("
+        }
+        binding.ponto.setOnClickListener {
+            calculo.text = "${calculo.text}."
+        }
+        binding.multiplica.setOnClickListener {
+            calculo.text = "${calculo.text}*"
+        }
+        binding.divide.setOnClickListener {
+            calculo.text = "${calculo.text}/"
+        }
+        binding.menos.setOnClickListener {
+            calculo.text = "${calculo.text}-"
+        }
+        binding.mais.setOnClickListener {
+            calculo.text = "${calculo.text}+"
+        }
+
+        binding.backspace.setOnClickListener {
+            calculo.text = calculo.text.dropLast(1)
+        }
+
+
+
     }
 }
