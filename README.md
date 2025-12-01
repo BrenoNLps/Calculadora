@@ -1,3 +1,9 @@
+## 🙋‍♂️ Sobre o projeto
+
+Esse app foi desenvolvido como parte da disciplina **Programação para Dispositivos Móveis** no **IFSP - São Carlos**. 
+A intenção era aplicar conceitos de interface, lógica e boas práticas com Kotlin.
+
+---
 
 # 📱 Calculadora Android
 Calculadora simples usando Kotlin e Android Studio 
@@ -5,11 +11,6 @@ Calculadora simples usando Kotlin e Android Studio
 ![Calculadora Android](image/capa.png)
 
 ---
-## 🙋‍♂️ Sobre o projeto
-
-Esse app foi desenvolvido como parte da disciplina **Programação para Dispositivos Móveis** no **IFSP - São Carlos**. 
-A intenção era aplicar conceitos de interface, lógica e boas práticas com Kotlin.
-
 
 ## ✨ O que ela faz
 
