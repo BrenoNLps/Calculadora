@@ -39,4 +39,4 @@ A lógica está toda na `MainActivity.kt`. Os botões da calculadora chamam a fu
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-android.git
+   git clone https://github.com/BrenoNLps/calculadora-android.git
