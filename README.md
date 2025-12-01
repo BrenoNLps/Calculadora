@@ -1,7 +1,7 @@
 ## 🙋‍♂️ Sobre o projeto
 
 Esse app foi desenvolvido como parte da disciplina **Programação para Dispositivos Móveis** no **IFSP - São Carlos**. 
-A intenção era aplicar conceitos de interface, lógica e boas práticas com Kotlin.
+A intenção é aplicar conceitos de interface, lógica e boas práticas com Kotlin.
 
 ---
 
